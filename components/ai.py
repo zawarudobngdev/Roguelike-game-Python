@@ -6,13 +6,12 @@ import numpy as np
 import tcod
 
 from actions import Action, MeleeAction, MovementAction, WaitAction
-from components.base_component import BaseComponent
 
 if TYPE_CHECKING:
     from entity import Actor
 
 
-class BaseAI(Action, BaseComponent):
+class BaseAI(Action):
     entity: Actor
 
     def perform(self) -> None:
@@ -23,9 +22,9 @@ class BaseAI(Action, BaseComponent):
 
         If there is no valid path then returns an empty list.
         """
-        cost = np.array(self.entity.gamemap.tiles["walkable"], dtype=np.int8)
+        cost = np.array(self.entity.parent.tiles["walkable"], dtype=np.int8)
 
-        for entity in self.entity.gamemap.entities:
+        for entity in self.entity.parent.entities:
             if entity.blocks_movement and cost[entity.x, entity.y]:
                 # Add to the cost of a blocked position.
                 # A lower number means more enemies will crowd behind each other in
