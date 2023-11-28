@@ -1,2 +1,2 @@
 # Roguelike-game-Python
-learning tcod
+A Roguelike Dungeon Crawler Game made in Python with libtcod :shipit:
