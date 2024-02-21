@@ -1,10 +1,9 @@
 # Roguelike-game-Python
 ### A Roguelike Dungeon Crawler Game made in Python with libtcod :shipit:
 
-TODO: -fix error when interacting with equipped items;
-
--organize project;
-
--add menu;
-
--add sounds;
+| # | TO DO |
+|-----:|-----------|
+|     1| fix error when interacting with equipped items|
+|     2| reorganize project    |
+|     3| add menu       |
+|     4| add sounds       |
